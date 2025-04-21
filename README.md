@@ -40,7 +40,7 @@ Authorization: Basic <Base64(tenantId:tenantSecret)>
 
 ```json
 {
-  "pan_number": "FQYPK1686K"
+  "pan_number": "FQYPK****K"
 }
 ```
 
@@ -53,13 +53,13 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic <your_api_token>' \
 --data '{
-    "pan_number": "FQYPK1686K"
+    "pan_number": "FQYPK****K"
 }'
 ```
 
 ---
 
-## ✅ Successful Response
+## ✅ Successful Response cases (200)
 
 ### If provided PAN is valid and we are able to fetch details related to PAN.
 
@@ -137,6 +137,19 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 
 ---
 
+## ❌ Some error occured while getting PAN details
+
+```json
+{
+  "request_id": "39e3e6b0-6c26-4614-bdda-83b8fafd4d79",
+  "pan_data": {
+    "error": true
+  }
+}
+```
+
+---
+
 ## ⚠️ Invalid PAN Number input
 
 ```json
@@ -149,16 +162,16 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 ```
 
 
-## ⚠️ Other Possible non 2XX response codes.
+## ⚠️ Other Possible non 200 response codes.
 
-### 400
+### 4XX
 ```json
 {"error_msg": "Bad Request"}
 ```
 
 ### 5XX
 ```json
-{"error_msg": "Sign3 Server Error"}
+{"error_msg": "Sign3 Server Error" || <message related to error>}
 ```
 
 ---
