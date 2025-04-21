@@ -3,7 +3,7 @@ This document outlines how to integrate with the PAN Details API provided by Sig
 
 ---
 
-## 📘 Endpoint
+## Endpoint
 
 ```
 POST https://you.sign3.in/v1/pan_details
@@ -11,7 +11,7 @@ POST https://you.sign3.in/v1/pan_details
 
 ---
 
-## 🔐 Authorization
+## Authorization
 
 This API requires **Basic Auth** via the `Authorization` header.
 
@@ -23,7 +23,7 @@ Authorization: Basic <Base64(tenantId:tenantSecret)>
 
 ---
 
-## 📥 Request
+## Request
 
 ### Headers
 
@@ -46,7 +46,7 @@ Authorization: Basic <Base64(tenantId:tenantSecret)>
 
 ---
 
-## 📤 Example cURL Request
+## Example cURL Request
 
 ```bash
 curl --location 'https://you.sign3.in/v1/pan_details' \
@@ -59,7 +59,7 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 
 ---
 
-## ✅ Successful Response cases (200)
+## Successful Response cases (200)
 
 ### If provided PAN is valid and we are able to fetch details related to PAN.
 
@@ -95,7 +95,7 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 }
 ```
 
-### 🔍 Response Field Details
+### Response Field Details
 
 | Field                                       | Type      | Description                                       |
 |---------------------------------------------|---------- |---------------------------------------------------|
@@ -124,7 +124,7 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 
 ---
 
-## ❌ No PAN Details Found for give PAN input
+## No PAN Details Found for give PAN input
 
 ```json
 {
@@ -137,7 +137,7 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 
 ---
 
-## ❌ Some error occured while getting PAN details
+## Some error occured while getting PAN details
 
 ```json
 {
@@ -150,7 +150,7 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 
 ---
 
-## ⚠️ Invalid PAN Number input
+## Invalid PAN Number input
 
 ```json
 {
@@ -162,7 +162,7 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 ```
 
 
-## ⚠️ Other Possible non 200 response codes.
+## Other Possible non 200 response codes.
 
 ### 4XX
 ```json
@@ -176,7 +176,7 @@ curl --location 'https://you.sign3.in/v1/pan_details' \
 
 ---
 
-## 📝 Notes
+## Notes
 
 - Ensure that your PAN input is in valid format (10-character alphanumeric string).
 
