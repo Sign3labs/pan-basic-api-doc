@@ -1,4 +1,4 @@
-# sign3-pan-details-basic-integration-doc
+# pan-basic-api-doc
 This document outlines how to integrate with the PAN Details API provided by Sign3. The API accepts a PAN number and returns various details related to the PAN.
 
 ---
